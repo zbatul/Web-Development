@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="club.css">
+    <title>
+        Login page - FKC
+    </title>
+</head>
+
+<body>
+    <nav>
+        <ul class="Menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li class="active"><a href="login.html">Login</a></li>
+            <li><a href="membership.html">Apply Now</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header>
+            <h1>Login</h1>
+        </header>
+        <form>
+            <div>
+                <label>Email: </label>
+                <input type="email" minlength="3" maxlength="64" required="required">
+                <label>Password: </label>
+                <input type="password" minlength="8" maxlength="26" required="required">
+                <button type="button">Login</button>
+            </div>
+        </form>
+
+        <section style="background-color: #d4f9cf; margin-top: 2em; padding-top: 1em; padding-left: 3em; padding-right: 3em;padding-bottom: 1em; border: 3px dotted red">
+            <h3 style="font-family: cursive; color: red; text-align: center">DOODLE FUN!</h3>
+            <button type="button" id="addButton">Add</button>
+            <button type="button" id="clearButton">Clear</button>
+            <div>
+                <svg id="mySVG" height="650" width="750">
+                    <circle cx="440" cy="310" r="300" stroke="red" stroke-width="3" fill="#fbf5d9" />
+                </svg>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <strong> <em>&copy; 2020 Fremont Knitting Club &#x1F9F6</em></strong>
+    </footer>
+
+    <script>
+        mySVG = document.getElementById("mySVG");
+
+        // Add Button to generate random circles
+        var buttonAdd = document.getElementById("addButton")
+        var maxXY = 222,
+            maxRadius = 75;
+        function generateRandomCircle() {
+            let cdist = Math.sqrt(~~(Math.random() * maxXY * maxXY));
+            let angle = Math.random() * 2 * Math.PI;
+            let cx = 440 + cdist * Math.cos(angle);
+            let cy = 310 + cdist * Math.sin(angle);
+            let cr = Math.random() * maxRadius;
+            let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            let colorStr = `rgb(${255*Math.random()},${255*Math.random()},${255*Math.random()})`;
+            circle.setAttribute("cx", cx);
+            circle.setAttribute("cy", cy);
+            circle.setAttribute("r", cr);
+            circle.setAttribute("fill", colorStr);
+            circle.setAttribute("fill-opacity", 0.7);
+            return circle;
+        }
+        function addCircle() {
+            mySVG.appendChild(generateRandomCircle());
+        }
+        buttonAdd.addEventListener('click', addCircle);
+
+        // Clear button to clear the random circles
+        buttonClear = document.getElementById("clearButton")
+        function clearCircles() {
+            let i = mySVG.childNodes.length - 1;
+            while (i != 1) {
+                mySVG.removeChild(mySVG.childNodes[i]);
+                i = i - 1;
+            }
+        }
+        buttonClear.addEventListener('click', clearCircles)
+
+    </script>
+</body>
+
+</html>

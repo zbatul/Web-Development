@@ -1,0 +1,46 @@
+table {
+    background-color: #6188c4;
+}
+
+caption {
+    font-family: 'Rock Salt', cursive;
+    padding: 20px;
+    font-style: italic;
+    caption-side: bottom;
+    color: purple;
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+thead th {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    padding: 0.5em;
+}
+
+tbody th {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    letter-spacing: 2px;
+}
+
+tbody td {
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* zebra striping */
+tbody tr:nth-child(odd) {
+    background-color: #d4f9cf;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fbf5d9;
+}
+
+tfoot td {
+    text-align: center;
+    letter-spacing: 1px;
+    color: white;
+    padding: 0.5em;
+}

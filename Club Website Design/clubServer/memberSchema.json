@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://DrBsclasses.org/student47/node/members",
+    "title": "Member",
+    "description": "A club member information",
+    "type": "object",
+    "properties": {
+        "firstName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 26
+        },
+		"lastName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 26
+        },
+		"email": {
+			"type": "string",
+			"format": "email",
+			"minLength": 3,
+			"maxLength": 64
+		},
+        "role": {
+            "description": "role of the user: guest, member or admin",
+            "type": "string"
+        },
+		"passHash": {
+			"description": "Hashed password of user",
+			"type": "string"
+		}
+    },
+    "required": ["firstName", "lastName", "email", "role", "passHash"],
+    "additionalProperties": true
+}

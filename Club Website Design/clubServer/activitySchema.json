@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://DrBsclasses.org/student47/node/activities",
+    "title": "Activity",
+    "description": "A club activity for the schedule",
+    "type": "object",
+    "properties": {
+        "activity": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+        },
+        "timings": {
+            "description": "the date(s) or timing(s) of the activity",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+        },
+        "items": {
+            "description": "items required for the activity",
+            "type": "array"
+        },
+        "desc": {
+            "description": "the description of activity",
+            "type": "string",
+            "maxLength": 200
+        }
+    },
+    "required": ["activity", "timings"],
+    "additionalProperties": false
+}

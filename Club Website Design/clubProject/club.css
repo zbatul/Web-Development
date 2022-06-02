@@ -1,0 +1,210 @@
+@font-face {
+    font-family: "myFont";
+    src: url("LindenHill-Italic-webfont.ttf");
+}
+
+body {
+    background-color: palevioletred;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: 0em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    background-color: pink;
+    padding: 0.25em;
+    border: 6px solid purple;
+    border-radius: 10px;
+    position: fixed;
+    top: 0px;
+    width: 80vw;
+    box-sizing: border-box;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+.Menu {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+main {
+    background-color: whitesmoke;
+    margin-bottom: 1em;
+    margin-top: 84px;
+    padding-top: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 1em;
+    border-left: 6px solid purple;
+    border-right: 6px solid purple;
+    border-bottom: 6px solid purple;
+    border-radius: 10px;
+    width: 80vw;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "myFont";
+    color: purple;
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+}
+
+figure.figStyle1 {
+    float: left;
+    padding: 0 20px 20px 0;
+}
+
+figure.figStyle2 {
+    float: right;
+    padding: 0 20px 20px 0;
+}
+
+figure.figStyle3 {
+    float: left;
+    padding: 0 20px 20px 0;
+}
+
+h2 {
+    font-family: "myFont";
+    color: purple;
+    font-size: 30px;
+}
+
+section.first {
+    display: inline-block;
+}
+
+section.tableSection {
+    display: inline-block;
+}
+
+table {
+    background-color: #6188c4;
+}
+
+caption {
+    font-family: 'Rock Salt', cursive;
+    padding: 20px;
+    font-style: italic;
+    caption-side: bottom;
+    color: purple;
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+thead th {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    padding: 0.5em;
+}
+
+tbody th {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    letter-spacing: 2px;
+}
+
+tbody td {
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* zebra striping */
+tbody tr:nth-child(odd) {
+    background-color: #d4f9cf;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fbf5d9;
+}
+
+tfoot td {
+    text-align: center;
+    letter-spacing: 1px;
+    color: white;
+    padding: 0.5em;
+}
+
+li.active {
+    display: table;
+    background-color: darkgrey;
+}
+
+a:visited {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: antiquewhite;
+}
+
+input:invalid {
+    border: 2px solid red;
+    background-color: pink;
+}
+
+input:valid {
+    border: 2px solid green;
+    background-color: greenyellow;
+}
+
+.FormDiv {
+    background-color: #d4f9cf;
+    display: grid;
+    grid-template-columns: 20em 30rem;
+    grid-row-gap: 1em;
+    grid-column-gap: 0.5em;
+    border: 3px dotted red;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.FormDiv label {
+    justify-self: end;
+    font-style: italic;
+}
+
+#ThanksDialog {
+    display: none;
+    background: rgba(0, 255, 255, 0.6);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+#ThanksDialog > div {
+    display: block;
+    background: rgba(222, 249, 207, 1);
+    margin: 12em;
+    padding: 2em;
+    max-width: 50%;
+    text-align: center;
+    border: 3px solid #6188c4;
+    border-radius: 10px;
+}
+
+#ThanksDialog.show {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    font-size: 25px;
+    color: black;
+}

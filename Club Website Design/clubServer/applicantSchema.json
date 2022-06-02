@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://DrBsclasses.org/student47/node/applicants",
+    "title": "Applicant",
+    "description": "A club applicant information",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 26
+        },
+		"email": {
+			"type": "string",
+			"format": "email",
+			"minLength": 3,
+			"maxLength": 64
+		},
+		"password": {
+			"description": "password of applicant",
+			"type": "string"
+		},
+        "skillLevel": {
+			"description": "Initial skill level of applicant",
+			"type": "string"
+		},
+        "hearAboutUs": {
+			"description": "Where did you hear about us",
+			"type": "string"
+		},
+        "comments": {
+			"description": "comments from applicant",
+			"type": "string"
+		}
+    },
+    "required": ["name", "email", "password", "skillLevel"],
+    "additionalProperties": true
+}

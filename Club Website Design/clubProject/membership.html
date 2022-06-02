@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="club.css">
+    <title>
+        Membership - FKC
+    </title>
+</head>
+
+<body>
+    <nav>
+        <ul class="Menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li class="active"><a href="membership.html">Apply Now</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header>
+            <h1>Membership Form</h1>
+        </header>
+        <form>
+            <div class="FormDiv">
+                <label>Name: </label>
+                <input id="name" type="text" value="" minlength="2" maxlength="26" required="required">
+                <label>Email: </label>
+                <input id="email" type="email" value="" minlength="3" maxlength="64" required="required">
+                <label>Password: </label>
+                <input id="pwd" type="password" value="" minlength="8" maxlength="26" required="required">
+                <label>Skill Level: </label>
+                <select name="skillLevel" id="skillLevel">
+                    <option value="beginner">New to Knitting</option>
+                    <option value="intermediate">Have done some Knitting</option>
+                    <option value="advanced">Knitted a lot</option>
+                </select>
+                <label>Where did you hear about us: </label>
+                <select name="hearAboutUs" id="hearAboutUs">
+                    <option value="browsing">Browsing the Internet</option>
+                    <option value="friend">Friend</option>
+                    <option value="socialMedia">Social Media</option>
+                    <option value="flyer">Flyer/Pamphlet</option>
+                    <option value="other">Other</option>
+                </select>
+                <label>Comments: </label>
+                <textarea cols="30" rows="3" placeholder="Anything else you want us to know..."></textarea>
+                <button type="button" id="applyButton">Apply</button>
+            </div>
+        </form>
+
+        <section id="ThanksDialog">
+        </section>
+
+    </main>
+
+    <footer>
+        <strong> <em>&copy; 2020 Fremont Knitting Club &#x1F9F6</em></strong>
+    </footer>
+
+    <script>
+        function createThanksDialog() {
+            thanksDialog = document.getElementById("ThanksDialog");
+
+            /*Create a division div, heading h2 and paragraph p nodes*/
+            var divDialog = document.createElement("div"),
+                heading = document.createElement("H2"),
+                para = document.createElement("P"),
+                closeButton = document.createElement("BUTTON");
+
+            /*Append text node to h2*/
+            var text = document.createTextNode("Thank You for Applying!");
+            heading.appendChild(text);
+
+            /*Append name, email and skill level nodes to p*/
+            let name = document.getElementById("name").value;
+            var n = document.createTextNode(`Your name: ${name}, `);
+            let email = document.getElementById("email").value;
+            var e = document.createTextNode(`Email: ${email}, `);
+            let skill = document.getElementById("skillLevel").value;
+            var s = document.createTextNode(`Skill level: ${skill}`);
+            para.appendChild(n);
+            para.appendChild(e);
+            para.appendChild(s);
+
+            /*Append text node to button*/
+            closeButton.innerHTML = "Close";
+
+            /*Append h2, p and button to div*/
+            divDialog.appendChild(heading);
+            divDialog.appendChild(para);
+            divDialog.appendChild(closeButton);
+
+            /*Append div to section with id "ThanksDialog"*/
+            thanksDialog.appendChild(divDialog);
+
+            /*Toggle the ThanksDialog with show class*/
+            thanksDialog.classList.toggle('show');
+
+            /*Add event listener to Close button*/
+            closeButton.addEventListener('click', function() {
+                thanksDialog.classList.toggle('show');
+                thanksDialog.removeChild(divDialog);
+            });
+        }
+
+        /*Add event listener to Apply button*/
+        applyButton = document.getElementById("applyButton");
+        applyButton.addEventListener('click', createThanksDialog);
+
+    </script>
+
+</body>
+
+</html>

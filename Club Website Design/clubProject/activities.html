@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="club.css">
+    <title>
+        Activities - FKC
+    </title>
+    <script src="eventData.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul class="Menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="activities.html">Activities</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="membership.html">Apply Now</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header>
+            <h1>FKC Activities</h1>
+        </header>
+
+        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd" stroke="#2a2e3b" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)">
+                <path d="m8.24920737-.79402796c1.17157287 0 2.12132033.94974747 2.12132033 2.12132034v13.43502882l-2.12132033 3.5355339-2.08147546-3.495689-.03442539-13.47488064c-.00298547-1.16857977.94191541-2.11832105 2.11049518-2.12130651.00180188-.00000461.00360378-.00000691.00540567-.00000691z" transform="matrix(.70710678 .70710678 -.70710678 .70710678 8.605553 -3.271644)" />
+                <path d="m13.5 4.5 1 1" />
+            </g>
+        </svg>
+        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd" stroke="#2a2e3b" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 3)">
+                <path d="m12.5 12.5v-7l-5-5h-5c-1.1045695 0-2 .8954305-2 2v10c0 1.1045695.8954305 2 2 2h8c1.1045695 0 2-.8954305 2-2z" />
+                <path d="m7.5.5v3c0 1.1045695.8954305 2 2 2h3" />
+            </g>
+        </svg>
+        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd" stroke="#2a2e3b" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 4)">
+                <path d="m13.5 0 3 4-8 10-8-10 3.009-4z" />
+                <path d="m.5 4h16" />
+                <path d="m5.5 4 3 10" />
+                <path d="m11.5 4-3 10" />
+                <path d="m3.509 0 1.991 4 3-4 3 4 2-4" />
+            </g>
+        </svg>
+        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd" stroke="#2a2e3b" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="10.5" cy="10.5" r="8" />
+                <circle cx="10.5" cy="10.5" r="2" />
+                <circle cx="10.5" cy="10.5" r="5" />
+            </g>
+        </svg>
+
+        <figure class="figStyle3">
+            <img src="images/k3.jpeg" alt="Knitting Ventures" width="400" height="250">
+            <figcaption>Figure 1. Knitting Ventures.</figcaption>
+        </figure>
+
+        <section>
+            <h2>Knitting Activities:</h2>
+            <ul>
+                <li>Advanced knitting sessions with Continental and English knitting</li>
+                <li>Intermediate knitting sessions - Continental and English styles</li>
+                <li>Beginner knitting sessions - English style</li>
+            </ul>
+        </section>
+        <section class="tableSection">
+            <h2>Activity Schedule:</h2>
+            <table>
+                <caption>Knitting Activities Schedule</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Activity</th>
+                        <th scope="col">Timings</th>
+                        <th scope="col">Items Required</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody id="activityTableBody"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4"><em>NOTE: Make sure you bring knitting needles with appropriate size for your yarn!</em></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <strong> <em>&copy; 2020 Fremont Knitting Club &#x1F9F6</em></strong>
+    </footer>
+
+    <script>
+        tableBody = document.getElementById("activityTableBody")
+        events.forEach(function(obj, i) {
+            tableBody.innerHTML += '<tr><th scope="row">' + obj["activity"] + '</th><td>' + obj["timings"] + '</td><td>' + obj["items"] + '</td><td>' + obj["desc"] + '</td></tr>'
+        });
+
+    </script>
+
+</body>
+
+</html>

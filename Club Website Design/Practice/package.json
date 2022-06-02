@@ -1,0 +1,22 @@
+{
+  "name": "myreact",
+  "version": "0.0.1",
+  "description": "My first react project with parcel",
+  "main": "dataDump.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "parcel"
+  ],
+  "author": "Batul Zamin",
+  "license": "ISC",
+  "dependencies": {
+    "dns": "^0.2.2",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

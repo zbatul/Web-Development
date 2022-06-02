@@ -1,0 +1,23 @@
+{
+  "name": "clubserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "clubServer.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Batul Zamin",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^6.12.6",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "nedb": "^1.8.0",
+    "nedb-promises": "^4.1.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.2.1",
+    "supertest": "^6.0.1"
+  }
+}
